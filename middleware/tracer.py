@@ -15,6 +15,6 @@ class TracerMiddleware:
             response_value = response.getvalue()
         else:
             response_value = response
-        print("{self.name}: after", response_value)
+        print(f"{self.name}: after", response_value)
 
         return response

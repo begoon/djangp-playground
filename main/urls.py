@@ -15,9 +15,10 @@ Including another URLconf
 """
 from django.urls import path
 
-from .views import main_view, main_view_api
+from .views import main_view, main_view_api_echo, main_view_api_questions
 
 urlpatterns = [
     path('', main_view),
-    path('api/', main_view_api),
+    path('api/echo', main_view_api_echo),
+    path('api/questions', main_view_api_questions),
 ]
