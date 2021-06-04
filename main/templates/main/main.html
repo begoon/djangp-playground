@@ -1,0 +1,10 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+{% load static %}
+<script src="{% static 'main/js/scripts.js' %}"></script>
+<br />
+{{ name }}, hello world!
+<br />
+<div id="output"></div>
+{% endblock %}
