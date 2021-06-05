@@ -7,7 +7,7 @@ $.ajax({
 
 $.ajax({
     url: "api/questions", success: function (result) {
-        const questions = result.data.questions;
+        const questions = result.questions;
         const output = Object.values(questions).map(({ question, image }) => {
             return `${image}: ${question}`;
         });

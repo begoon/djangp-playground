@@ -1,6 +1,7 @@
 from django.http.response import JsonResponse
 from django.shortcuts import render
-
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
 from .models import Main
 
 # Create your views here.
@@ -14,9 +15,7 @@ def main_view_api_echo(request):
     return JsonResponse({'message': 'ok'})
 
 
+@api_view(['GET'])
 def main_view_api_questions(request):
     data = Main.objects.all()[0].settings
-    return JsonResponse(
-        {'data': data},
-        headers={'content_type': 'application/json; charset=utf-8'},
-    )
+    return Response(data)

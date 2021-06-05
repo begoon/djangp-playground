@@ -16,6 +16,8 @@ decorator==4.4.2
 defusedxml==0.6.0
 Django==3.2.4
 django-json-widget==1.1.1
+django-rest-framework==0.1.0
+djangorestframework==3.12.4
 entrypoints==0.3
 flake8==3.8.3
 Flask==1.1.2
